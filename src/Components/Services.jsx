@@ -53,7 +53,7 @@ const Services = () => {
           {
             servicesData.map(services => {
               return (
-                <Col md={4} className='holder' key={services.id}>
+                <Col md={4} sm={1} className='holder' key={services.id}>
                   <div className='card shadow'>
                   <div className="overflow">
                    <img src={services.image} alt="service img" className='img-fluid card-img-top'/>

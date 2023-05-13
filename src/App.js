@@ -10,6 +10,7 @@ import Team from './Components/Team';
 import Contact from './pages/contact/Contact';
 import Verification from './Components/Verification';
 import Header from './Components/Header';
+import Footer from './pages/common/Footer';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
   <Route path="contact" element={<Contact/>} />
   <Route path="verification" element={<Verification/>} />
 </Routes>
-    
+    <Footer/>
     </>
   );
 }

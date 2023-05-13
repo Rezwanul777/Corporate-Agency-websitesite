@@ -12,6 +12,7 @@ html {
     max-height: 1000000px;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
   
   body {
@@ -891,6 +892,7 @@ html {
   
   .blog-block img {
     margin: 0 0 15px;
+    overflow: hidden;
   }
   
   .blog-block time {
