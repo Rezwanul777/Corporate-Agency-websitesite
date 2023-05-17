@@ -12,7 +12,16 @@ import Verification from './Components/Verification';
 import Header from './Components/Header';
 import Footer from './pages/common/Footer';
 
+// animation part import
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 function App() {
+  useEffect(()=>{
+    AOS.init();
+  },[])
+
   return (
     <>
     <div id='header'>

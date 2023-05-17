@@ -514,6 +514,16 @@ html {
     -webkit-transition: width 0.3s linear;
     transition: width 0.3s linear;
   }
+
+  /* choose component */
+  #choose-section{
+    margin: 60px 0;
+  }
+
+  .choose-image-side{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
   
   /* .services-block .icon {
     width: 60px;
@@ -562,7 +572,8 @@ html {
 
   .card-img-top{
     transform: scale(1);
-    transition:transform 0.6s ease-in-out
+    transition:transform 0.6s ease-in-out;
+    
   }
 
   .card-img-top:hover{
@@ -1036,6 +1047,11 @@ html {
     .hero-block .carousel-caption {
       left: 7%;
       right: 7%;
+   
+    }
+
+    .caption-text{
+      padding-left: 20px;
     }
   
     .hero-block .carousel-control {

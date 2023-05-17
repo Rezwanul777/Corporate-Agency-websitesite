@@ -5,22 +5,22 @@ const heroData = [
     {
       id: 1,
       image: require('../assets/images/slide01.jpg'),
-      title: 'The perfect design for your website',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit dicta nulla. Consequuntur obcaecati officiis, labore doloribus non tempore impedit consequatur ab dolor. Explicabo quam repellendus vero omnis, nisi odio!',
+      title: 'ASCB Accredited Certification ',
+      description: 'ISO 9001, ISO 14001, ISO 22000, ISO 45001',
       link: 'https://www.google.com'
     },
     {
       id: 2,
       image: require('../assets/images/slide02.jpg'),
-      title: 'Start Your Future Financial Plan',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit dicta nulla. Consequuntur obcaecati officiis, labore doloribus non tempore impedit consequatur ab dolor. Explicabo quam repellendus vero omnis, nisi odio!',
+      title: 'We are hiring auditors worldwide',
+      description: 'Global Partnership Opportunity Available.',
       link: 'https://www.facebook.com'
     },
     {
       id: 3,
       image: require('../assets/images/slide03.jpg'),
-      title: 'Enjoy the Difference',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit dicta nulla. Consequuntur obcaecati officiis, labore doloribus non tempore impedit consequatur ab dolor. Explicabo quam repellendus vero omnis, nisi odio!',
+      title: 'Sustainability through',
+      description: 'Continual Improvement',
       link: 'https://www.twitter.com'
     }
   ]
@@ -40,8 +40,8 @@ const Banner = () => {
                     alt={"slide " + hero.id}
                   />
                   <Carousel.Caption>
-                    <h2>{hero.title}</h2>
-                    <p>{hero.description}</p>
+                    <h1 className='caption-text'>{hero.title}</h1>
+                    <h2>{hero.description}</h2>
                     <a className="btn btn-primary" href={hero.link}>Learn More <i className="fas fa-chevron-right"></i></a>
                   </Carousel.Caption>             
                 </Carousel.Item>
