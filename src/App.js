@@ -16,6 +16,8 @@ import Footer from './pages/common/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import CardDetails from './Components/CardDetails';
+
 
 function App() {
   useEffect(()=>{
@@ -33,6 +35,7 @@ function App() {
   <Route path="about" element={<About/>} />
   <Route path="Works" element={<Works/>} />
   <Route path="services" element={<Services/>} />
+  <Route path="/details/:id" element={<CardDetails/>} />
   <Route path="team" element={<Team/>} />
   <Route path="contact" element={<Contact/>} />
   <Route path="verification" element={<Verification/>} />

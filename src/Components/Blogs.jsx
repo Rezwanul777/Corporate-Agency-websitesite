@@ -45,7 +45,7 @@ const Blogs = () => {
                 <Col md={4} sm={1} key={blog.id}>
                   <div className='holder'>
                     <Card >
-                     <div className='overflow'>
+                     <div className='overflow card'>
                      <Card.Img variant="top" src={blog.image} className='d-block w-100'/>
                      </div>
                       <Card.Body>

@@ -1,5 +1,7 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import Blogs from './Blogs';
+import { Link } from 'react-router-dom';
 
 const servicesData = [
   {
@@ -53,16 +55,42 @@ const Services = () => {
           {
             servicesData.map(services => {
               return (
+
+              //   <Col md={4} sm={1} key={services.id}>
+              //   <div className='holder'>
+              //     <Card className='shadow'>
+              //      <div className='overflow '>
+              //      <Card.Img variant="top" src={services.image} className='d-block w-100'/>
+              //      </div>
+              //       <Card.Body >
+              //         <time>{services.time}</time>
+              //         <Card.Title>{services.title}</Card.Title>
+              //         <Card.Text>
+              //           {services.description}
+              //         </Card.Text>
+              //         <a href={services.link} className="btn btn-primary">Read More <i className="fas fa-chevron-right"></i></a>
+              //       </Card.Body>
+              //     </Card>
+              //   </div>
+              // </Col>
+
+
                 <Col md={4} sm={1} className='holder' key={services.id}>
                   <div className='card shadow h-100'>
-                  <div className="overflow">
+                  <div className="overflow ">
                    <img src={services.image} alt="service img" className='img-fluid card-img-top'/>
                   </div>
                  <div className='service-text ps-2 '>
                  <h3>{services.title}</h3>
                   <p >{services.description}</p>
+                  <Link to={`/details/${services.id}`}>
+              <Button variant="primary">View Details <i className="fas fa-chevron-right"></i></Button>
+            </Link>
+                  {/* <a href={services.link} className="btn btn-primary">Read More <i className="fas fa-chevron-right"></i></a> */}
                  </div>
+                
                   </div>
+                  
                 </Col>
               );
             })

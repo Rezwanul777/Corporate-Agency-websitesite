@@ -377,6 +377,24 @@ html {
   .pagetitle .subtitle {
     color: #e6e6e6;
   }
+
+  .head {
+    padding: 10px 0;
+    line-height: 50px;
+    background-color: #05268d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .top-nav{
+    z-index: 9;
+    color: #fff;
+  }
+
+
+    
   
   #header {
     padding: 15px 0;
@@ -466,12 +484,12 @@ html {
   }
   
   .block {
-    padding: 70px 0;
+    padding: 90px 0;
     border-bottom: 1px solid #e6e6e6;
   }
   
   .hero-block {
-    margin: 65px 0 0;
+    margin: 125px 0 0;
   }
   
   .hero-block .carousel-item:before {
@@ -485,7 +503,7 @@ html {
   }
   
   .hero-block .carousel-item img {
-    width: 100%;
+    max-width: 100%;
   }
   
   .hero-block .carousel-caption {
@@ -493,11 +511,11 @@ html {
     right: 25%;
     transform: translateY(50%);
     -webkit-transform: translateY(50%);
-    bottom: 50%;
+    bottom: 40%;
   }
   
   .hero-block p {
-    margin: 0 0 30px;
+    margin: 0 0 40px;
   }
   
   .about-block .progress-block {
@@ -1035,11 +1053,14 @@ html {
       padding: 5px 10px;
       font-size: 15px;
     }
+
+ 
+    
   
-    #header {
+     #header {
       padding: 10px 0;
     }
-  
+   
     #header .navbar-collapse .navbar-nav {
       float: none;
     }
