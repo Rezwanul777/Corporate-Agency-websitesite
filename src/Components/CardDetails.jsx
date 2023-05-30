@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
 const cardDetails = [
@@ -47,15 +47,24 @@ const CardDetails = () => {
   const { title, description, image } = cardDetails[id];
   return (
 
-    <div>
-    <h1>{title}</h1>
-    <Card style={{width:"18rem"}}>
+    <>
+    <Container>
+      <h1 className='mt-4'>{title}</h1>
+      <Row>
+        <Col md={10} sm={1}>
+        <Card style={{width:"18rem"}}>
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Text>{description}</Card.Text>
       </Card.Body>
-    </Card>
-  </div>
+    </Card> 
+        </Col>
+      </Row>
+
+    </Container>
+     
+    
+  </>
   )
 }
 

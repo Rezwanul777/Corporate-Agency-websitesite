@@ -874,7 +874,13 @@ html {
     font-size: 35px;
     line-height: 45px;
   }
+
+  
    */
+   .certificate-text{
+      font-size: 14px;
+      text-align: justify;
+   }
   .blog-block {
     background: #f2f2f2;
   }

@@ -86,7 +86,7 @@ const Services = () => {
                   <Link to={`/details/${services.id}`}>
               <Button variant="primary">View Details <i className="fas fa-chevron-right"></i></Button>
             </Link>
-                  {/* <a href={services.link} className="btn btn-primary">Read More <i className="fas fa-chevron-right"></i></a> */}
+                 
                  </div>
                 
                   </div>

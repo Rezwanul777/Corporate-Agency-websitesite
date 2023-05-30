@@ -4,10 +4,13 @@ const jwt =require("jsonwebtoken");
 require("dotenv").config();
 
 // register
+
+
+
 exports.registerController=async(req,res)=>{
    try {
       // 1. destructure name, email, password from req.body
-      const{name,email,password}=req.body;
+      const{name,email,address,password,phone,answer}=req.body;
       // 2. all fields require validation
       if(!name.trim()){
          return res.send({message:"name is required"})
@@ -18,8 +21,15 @@ exports.registerController=async(req,res)=>{
       if(!password){
          return res.send({message:"password is required"})
       }
-    
-    
+      if(!address.trim()){
+         return res.send({message:"address is required"})
+      }
+      if(!answer.trim()){
+         return res.send({message:"answer is required"})
+      }
+      if(!phone){
+         return res.send({message:"phone is required"})
+      }
       // check user
       const existingUser=await userModel.findOne({email})
       // check existing user
@@ -34,7 +44,7 @@ exports.registerController=async(req,res)=>{
       const hashedPassword=await hashPassword(password)
       // save
       const user=await new userModel({
-         name,email,password:hashedPassword
+         name,email,address,phone,password:hashedPassword,answer
       }).save();
       res.status(201).send({
          success:true,
@@ -82,7 +92,7 @@ exports.loginController = async(req,res)=>{
           })
        }
           // token
-          const token =  jwt.sign({_id:user._id},process.env.JWT_SECRET,{
+          const token = jwt.sign({_id:user._id},process.env.JWT_SECRET,{
              expiresIn:"7d"
           })
           // send response

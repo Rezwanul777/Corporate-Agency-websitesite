@@ -5,6 +5,8 @@ import Services from '../../Components/Services'
 import Team from '../../Components/Team'
 import Testimonial from '../../Components/Testimonial'
 import Blogs from '../../Components/Blogs'
+import Verification from '../../Components/Verification'
+import Footer from '../common/Footer'
 
 
 const Home = () => {
@@ -17,6 +19,8 @@ const Home = () => {
         <Team/>
          <Testimonial/> 
          <Blogs/>
+         <Verification/>
+         <Footer/>
     </main>
    </>
   )

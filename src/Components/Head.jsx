@@ -1,6 +1,20 @@
 import React from 'react'
 
+const pdfFile="http://localhost:3000/form.pdf"
 const Head = () => {
+  const downloadFileUrl=(url)=>{
+    fetch(url).then(res=>res.blob()).then(blob=>{
+      const blobURL=window.URL.createObjectURL(new Blob([blob]))
+      const fileName=url.split('/').pop()
+      const aTag=document.createElement('a')
+      aTag.href=blobURL
+      aTag.setAttribute('download',fileName)
+      document.body.appendChild(aTag)
+      aTag.click()
+      aTag.remove()
+    })
+   
+  }
   return (
     <>
         <section className='head'>
@@ -16,7 +30,7 @@ const Head = () => {
             </div>
 
           <div className='social d-flex gap-4'>
-          <a  className="btn btn-primary">Get Qoute <i className="fas fa-chevron-right"></i></a>
+          <button  className="btn btn-primary" onClick={()=>{downloadFileUrl(pdfFile)}}>Get Qoute <i className="fas fa-chevron-right"></i></button>
           <a  className="btn btn-primary">Verification <i className="fas fa-chevron-right"></i></a>
           </div>
         </div>

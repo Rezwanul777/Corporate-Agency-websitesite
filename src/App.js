@@ -17,6 +17,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import CardDetails from './Components/CardDetails';
+import certificateDetails from './pages/certificateDetails';
 
 
 function App() {
@@ -39,8 +40,10 @@ function App() {
   <Route path="team" element={<Team/>} />
   <Route path="contact" element={<Contact/>} />
   <Route path="verification" element={<Verification/>} />
+  <Route path="/details" element={certificateDetails} />
+      
 </Routes>
-    <Footer/>
+   
     </>
   );
 }
